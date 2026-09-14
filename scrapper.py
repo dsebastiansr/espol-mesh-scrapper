@@ -715,7 +715,7 @@ async def main(career: str, version:int, concurrency: int, out_dir: str, x_thres
             "approved_count_requirement": it.get("approved_count_requirement"),
         })
 
-    out_path = Path(out_dir) / f"{career}_final.json"
+    out_path = Path(out_dir) / f"{career}.json"
     out_path.write_text(json.dumps(clean_final, ensure_ascii=False, indent=2), encoding="utf-8")
 
     # stats
